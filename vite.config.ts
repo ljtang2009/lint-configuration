@@ -18,13 +18,16 @@ export default defineConfig({
       formats: ['cjs'],
     },
     rollupOptions: {
-      external: ['@stylistic/eslint-plugin',
-                 'typescript-eslint',
-                 'jsonc-eslint-parser',
-                 'eslint-plugin-jsonc',
-                 'stylelint-config-clean-order',
-                 'stylelint-prettier',
-                 'confusing-browser-globals'],
+      external: [
+        '@stylistic/eslint-plugin',
+        'typescript-eslint',
+        'jsonc-eslint-parser',
+        'eslint-plugin-jsonc',
+        'stylelint-config-clean-order',
+        'stylelint-prettier',
+        'confusing-browser-globals',
+        'eslint-plugin-jest',
+      ],
       output: {
         globals: {
           '@stylistic/eslint-plugin':     'stylisticEslintPlugin',
@@ -34,6 +37,7 @@ export default defineConfig({
           'stylelint-config-clean-order': 'stylelintConfigCleanOrder',
           'stylelint-prettier':           'stylelintPrettier',
           'confusing-browser-globals':    'confusingBrowserGlobals',
+          'eslint-plugin-jest':           'eslintPluginJest',
         },
       },
     },

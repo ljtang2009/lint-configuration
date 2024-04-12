@@ -1,8 +1,9 @@
-import { describe, expect, it } from 'vitest';
-import { addPluginName } from './ruleTools.js';
+import { describe, expect, it } from '@jest/globals';
+import { addPluginName } from './ruleTools';
 
 describe('addPluginName', () => {
   it('should add plugin name to rules object', () => {
+    expect.hasAssertions();
     const pluginName = 'myPlugin';
     const rules = {
       rule1: {},
@@ -13,10 +14,11 @@ describe('addPluginName', () => {
       'myPlugin/rule2': {},
     };
     const result = addPluginName(pluginName, rules);
-    expect(result).toEqual(expectedResult);
+    expect(result).toStrictEqual(expectedResult);
   });
 
   it('should add plugin name to rules array', () => {
+    expect.hasAssertions();
     const pluginName = 'myPlugin';
     const rules = [
       {
@@ -31,6 +33,6 @@ describe('addPluginName', () => {
       'myPlugin/rule2': {},
     };
     const result = addPluginName(pluginName, rules);
-    expect(result).toEqual(expectedResult);
+    expect(result).toStrictEqual(expectedResult);
   });
 });

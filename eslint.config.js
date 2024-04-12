@@ -34,6 +34,7 @@ export default [
   {
     ..._.merge(_.cloneDeep(baseTSConfig), {
       files:           ['src/**/*.ts'],
+      ignores:         ['src/**/*.spec.ts'],
       languageOptions: {
         parserOptions: {
           project:         join(import.meta.url, 'tsconfig.json'),
@@ -41,6 +42,17 @@ export default [
         },
       },
     }),
+  },
+  {
+    ..._.merge(_.cloneDeep(baseTSConfig), {
+      files:           ['src/**/*.spec.ts'],
+      languageOptions: {
+        parserOptions: {
+          project:         join(import.meta.url, 'tsconfig.test.json'),
+          tsconfigRootDir: __dirname,
+        },
+      },
+    }, eslint.jest.default),
   },
   {
     ..._.merge(_.cloneDeep(baseTSConfig), {

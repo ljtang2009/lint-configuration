@@ -2,6 +2,7 @@ codecov
 desm
 Gitee
 iife
+lcov
 redeclaration
 tseslint
 unspaced

@@ -27,9 +27,6 @@ export default [
       files:   ['**/*.js', '**/*.cjs', '**/*.mjs'],
       ignores: [
         'dist/**/*',
-        'docs/public/typedoc/**/*',
-        'docs/.vitepress/cache/**/*',
-        'docs/.vitepress/dist/**/*',
         'coverage/**/*',
       ],
     }),
@@ -62,8 +59,6 @@ export default [
     ..._.merge(_.cloneDeep(eslint.json.default), {
       files:   ['**/*.json', '**/*.jsonc', '**/*.json5'],
       ignores: [
-        'docs/.vitepress/dist/**/*',
-        'docs/data/**/*',
         'coverage/**/*',
         'package.json',
       ],

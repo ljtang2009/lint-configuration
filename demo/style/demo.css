@@ -1,0 +1,9 @@
+.a {
+  text-size-adjust: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --code-background: var(--dark-code-background); */
+  }
+}

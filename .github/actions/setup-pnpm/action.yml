@@ -11,12 +11,6 @@ runs:
         version: 'latest'
         run_install: false
 
-    - name: Set node version
-      uses: actions/setup-node@v4
-      with:
-        node-version: 'latest'
-        cache: 'pnpm'
-
     - name: Install
       shell: bash
       run: |

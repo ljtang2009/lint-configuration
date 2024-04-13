@@ -1,6 +1,6 @@
 {
-  "name": "lint-configuration",
-  "version": "1.0.0",
+  "name": "@ljtang2009/lint-configuration",
+  "version": "0.0.1",
   "description": "",
   "type": "module",
   "files": [

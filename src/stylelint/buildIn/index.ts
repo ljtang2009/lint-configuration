@@ -7,5 +7,6 @@ export default {
   reportInvalidScopeDisables:    [true, { severity: 'warning' }],
   reportNeedlessDisables:        [true, { severity: 'warning' }],
   ignoreDisables:                false,
+  allowEmptyInput:               true,
   rules,
 };

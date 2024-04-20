@@ -69,7 +69,7 @@
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^29.5.12",
     "browserslist-lint": "^0.3.3",
-    "caniuse-lite": "^1.0.30001609",
+    "caniuse-lite": "^1.0.30001611",
     "commitizen": "^4.3.0",
     "cspell": "^8.7.0",
     "cz-git": "^1.9.1",

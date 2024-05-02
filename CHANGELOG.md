@@ -1,3 +1,10 @@
+## [0.1.2](https://github.com/ljtang2009/lint-configuration/compare/v0.1.1...v0.1.2) (2024-05-02)
+
+
+### Bug Fixes
+
+* :bug: fix npm release ([ae135f2](https://github.com/ljtang2009/lint-configuration/commit/ae135f2ca62108819cc04268239dc835b473556b))
+
 ## [0.1.1](https://github.com/ljtang2009/lint-configuration/compare/v0.1.0...v0.1.1) (2024-05-02)
 
 

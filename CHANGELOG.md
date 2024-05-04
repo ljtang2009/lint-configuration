@@ -1,3 +1,10 @@
+## [0.1.4](https://github.com/ljtang2009/lint-configuration/compare/v0.1.3...v0.1.4) (2024-05-04)
+
+
+### Bug Fixes
+
+* :bug: add peerDependencies ([15b19cb](https://github.com/ljtang2009/lint-configuration/commit/15b19cb02768b2568da04ded1fddf5fc2532625e))
+
 ## [0.1.3](https://github.com/ljtang2009/lint-configuration/compare/v0.1.2...v0.1.3) (2024-05-04)
 
 

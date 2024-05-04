@@ -1,3 +1,10 @@
+## [0.1.3](https://github.com/ljtang2009/lint-configuration/compare/v0.1.2...v0.1.3) (2024-05-04)
+
+
+### Bug Fixes
+
+* :bug: update markdownlint ([b3e5c59](https://github.com/ljtang2009/lint-configuration/commit/b3e5c5906b8bd5e4ebf9c27f1608aa4fac846c75))
+
 ## [0.1.2](https://github.com/ljtang2009/lint-configuration/compare/v0.1.1...v0.1.2) (2024-05-02)
 
 

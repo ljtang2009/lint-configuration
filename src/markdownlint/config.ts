@@ -132,7 +132,7 @@ export default {
   // @see https://github.com/DavidAnson/markdownlint/blob/main/doc/md024.md
   MD024: {
   // Only check sibling headings
-    siblings_only: false,
+    siblings_only: true,
   },
 
   // single-title/single-h1 - Multiple top-level headings in the same document

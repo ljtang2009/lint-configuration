@@ -1,3 +1,10 @@
+## [0.1.5](https://github.com/ljtang2009/lint-configuration/compare/v0.1.4...v0.1.5) (2024-05-05)
+
+
+### Bug Fixes
+
+* :bug: update package.json ([b417ed6](https://github.com/ljtang2009/lint-configuration/commit/b417ed67db78f54cfa3b4aed301ce7e8cadc89f2))
+
 ## [0.1.4](https://github.com/ljtang2009/lint-configuration/compare/v0.1.3...v0.1.4) (2024-05-04)
 
 

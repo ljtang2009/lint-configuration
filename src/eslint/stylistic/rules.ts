@@ -334,7 +334,7 @@ const rules = {
 
   // Disallow multiple spaces
   // https://eslint.style/rules/default/no-multi-spaces
-  'no-multi-spaces': ['error', {
+  'no-multi-spaces': ['warn', {
     ignoreEOLComments: true,
     exceptions:        {
       Property:           true,

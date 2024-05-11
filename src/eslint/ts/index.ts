@@ -1,18 +1,25 @@
 import rules from './rules/index.js';
 import tseslint from 'typescript-eslint';
+import { addPluginName } from '@/util/ruleTools.js';
 
-const config: Object = {
+const pluginName = '@typescript-eslint';
+
+const config: {
+  languageOptions: Record<string, unknown>;
+  plugins: Record<string, typeof tseslint.plugin>;
+  rules: Record<string, unknown>;
+} = {
   languageOptions: {
-    parser:        tseslint.parser,
+    parser: tseslint.parser,
     parserOptions: {
       // @see https://typescript-eslint.io/rules/consistent-type-imports/#usage-with-emitdecoratormetadata
       emitDecoratorMetadata: true,
     },
   },
   plugins: {
-    '@typescript-eslint': tseslint.plugin,
+    [pluginName]: tseslint.plugin,
   },
-  rules: rules.getRules('@typescript-eslint'),
+  rules: addPluginName(pluginName, rules),
 };
 
 export default config;

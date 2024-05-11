@@ -1,5 +1,7 @@
 // @see https://typescript-eslint.io/rules/?=recommended
 
+import buildInRules from '@/eslint/buildIn/rules/index.js';
+
 export default {
   // Disallow awaiting a value that is not a Thenable.
   // https://typescript-eslint.io/rules/await-thenable/
@@ -16,7 +18,7 @@ export default {
   // Disallow generic Array constructors.
   // https://typescript-eslint.io/rules/no-array-constructor/
   // use eslint rule
-  'no-array-constructor': 'off',
+  'no-array-constructor': buildInRules['no-array-constructor'],
 
   // Require .toString() to only be called on objects which provide useful information when stringified.
   // https://typescript-eslint.io/rules/no-base-to-string/
@@ -48,13 +50,13 @@ export default {
 
   // Disallow the use of eval()-like methods.
   // https://typescript-eslint.io/rules/no-implied-eval/
-  // use eslint rule https://eslint.org/docs/latest/rules/no-implied-eval
-  'no-implied-eval': 'off',
+  // use eslint rule
+  'no-implied-eval': buildInRules['no-implied-eval'],
 
   // Disallow literal numbers that lose precision.
   // https://typescript-eslint.io/rules/no-loss-of-precision/
   // use eslint rule
-  'no-loss-of-precision': 'off',
+  'no-loss-of-precision': buildInRules['no-loss-of-precision'],
 
   // Enforce valid definition of new and constructor.
   // https://typescript-eslint.io/rules/no-misused-new/
@@ -69,7 +71,7 @@ export default {
   'no-namespace': [
     'error',
     {
-      allowDeclarations:    true,
+      allowDeclarations: true,
       allowDefinitionFiles: true,
     },
   ],
@@ -130,7 +132,7 @@ export default {
   // Disallow unused variables.
   // https://typescript-eslint.io/rules/no-unused-vars/
   // use eslint rule
-  'no-unused-vars': 'off',
+  'no-unused-vars': buildInRules['no-unused-vars'],
 
   // Disallow require statements except in import statements.
   // https://typescript-eslint.io/rules/no-var-requires/
@@ -144,18 +146,18 @@ export default {
   // Disallow async functions which have no await expression.
   // https://typescript-eslint.io/rules/require-await/
   // use eslint rule
-  'require-await': 'off',
+  'require-await': buildInRules['require-await'],
 
   // Require both operands of addition to be the same type and be bigint, number, or string.
   // https://typescript-eslint.io/rules/restrict-plus-operands/
   'restrict-plus-operands': [
     'error',
     {
-      allowAny:                false,
-      allowBoolean:            false,
-      allowNullish:            false,
-      allowNumberAndString:    false,
-      allowRegExp:             false,
+      allowAny: false,
+      allowBoolean: false,
+      allowNullish: false,
+      allowNumberAndString: false,
+      allowRegExp: false,
       skipCompoundAssignments: false,
     },
   ],
@@ -165,11 +167,11 @@ export default {
   'restrict-template-expressions': [
     'error',
     {
-      allowAny:     false,
+      allowAny: false,
       allowBoolean: false,
       allowNullish: false,
-      allowNumber:  false,
-      allowRegExp:  false,
+      allowNumber: false,
+      allowRegExp: false,
     },
   ],
 
@@ -178,9 +180,9 @@ export default {
   'triple-slash-reference': [
     'error',
     {
-      path:  'never',
+      path: 'never',
       types: 'always',
-      lib:   'always',
+      lib: 'always',
     },
   ],
 

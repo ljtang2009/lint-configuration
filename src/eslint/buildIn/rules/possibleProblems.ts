@@ -228,13 +228,13 @@ export default {
   'no-unused-vars': [
     'error',
     {
-      vars:                           'all',
-      varsIgnorePattern:              '^_',
-      args:                           'after-used',
-      caughtErrors:                   'all',
-      caughtErrorsIgnorePattern:      '^_',
+      vars: 'all',
+      varsIgnorePattern: '^_',
+      args: 'after-used',
+      caughtErrors: 'all',
+      caughtErrorsIgnorePattern: '^_',
       destructuredArrayIgnorePattern: '^_',
-      ignoreRestSiblings:             true,
+      ignoreRestSiblings: true,
     },
   ],
 
@@ -243,9 +243,9 @@ export default {
   'no-use-before-define': [
     'error',
     {
-      functions:         true,
-      classes:           true,
-      variables:         true,
+      functions: true,
+      classes: true,
+      variables: true,
       allowNamedExports: false,
     },
   ],

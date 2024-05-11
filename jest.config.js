@@ -1,20 +1,22 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 const config = {
-  preset:          'ts-jest',
+  preset: 'ts-jest',
   collectCoverage: true,
   testEnvironment: 'node',
-  transform:       {
+  transform: {
     '^.+\\.tsx?$': [
       'ts-jest',
       {
         tsconfig: 'tsconfig.test.json',
-        useESM:   true,
+        useESM: true,
       },
     ],
   },
   coverageReporters: [
     'json',
-    ['html-spa', { subdir: 'html' }],
+    // XXX html-spa 会有路径问题
+    // ['html-spa', { subdir: 'html-spa', verbose: true }],
+    ['html', { subdir: 'html' }],
   ],
 };
 

@@ -1,6 +1,6 @@
 export default {
   plugins: ['stylelint-prettier'],
-  rules:   {
+  rules: {
     'prettier/prettier': true,
   },
 };

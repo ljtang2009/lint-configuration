@@ -1,12 +1,12 @@
-import stylistic from '@stylistic/eslint-plugin';
+import stylisticPlus from '@stylistic/eslint-plugin-plus';
 import rules from './rules.js';
 import { addPluginName } from '@/util/ruleTools.js';
 
-const pluginName = '@stylistic';
+const pluginName = '@stylistic/eslint-plugin-plus';
 
 export default {
   plugins: {
-    [pluginName]: stylistic,
+    [pluginName]: stylisticPlus,
   },
   rules: addPluginName(pluginName, rules),
 };

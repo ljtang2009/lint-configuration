@@ -1,14 +1,16 @@
 // @see https://typescript-eslint.io/rules/?=xrecommended-xstrict-xstylistic
 
+import buildInRules from '@/eslint/buildIn/rules/index.js';
+
 export default {
   // Enforce that class methods utilize this.
   // https://typescript-eslint.io/rules/class-methods-use-this
   // use eslint rule
-  'class-methods-use-this': 'off',
+  'class-methods-use-this': buildInRules['class-methods-use-this'],
 
   // Require return statements to either always or never specify values.
   // https://typescript-eslint.io/rules/consistent-return/
-  // TODO emit error: Could not find "consistent-return" in plugin "@typescript-eslint", so disable this rule
+  // XXX emit error: Could not find "consistent-return" in plugin "@typescript-eslint", so disable this rule
   // 'consistent-return': 'error',
 
   // Enforce consistent usage of type exports.
@@ -27,7 +29,7 @@ export default {
   // Enforce default parameters to be last.
   // https://typescript-eslint.io/rules/default-param-last/
   // use eslint rule
-  'default-param-last': 'off',
+  'default-param-last': buildInRules['default-param-last'],
 
   // Require explicit return types on functions and class methods.
   // https://typescript-eslint.io/rules/
@@ -44,12 +46,12 @@ export default {
   // Require or disallow initialization in variable declarations.
   // https://typescript-eslint.io/rules/init-declarations/
   // use eslint rule
-  'init-declarations': 'off',
+  'init-declarations': buildInRules['init-declarations'],
 
   // Enforce a maximum number of parameters in function definitions.
   // https://typescript-eslint.io/rules/max-params/
   // use eslint rule
-  'max-params': 'off',
+  'max-params': buildInRules['max-params'],
 
   // member-ordering
   // https://typescript-eslint.io/rules/member-ordering/
@@ -224,7 +226,7 @@ export default {
   // Disallow duplicate class members.
   // https://typescript-eslint.io/rules/no-dupe-class-members/
   // use eslint rule
-  'no-dupe-class-members': 'off',
+  'no-dupe-class-members': buildInRules['no-dupe-class-members'],
 
   // Enforce the use of top-level import type qualifier when an import only has specifiers with inline type qualifiers.
   // https://typescript-eslint.io/rules/no-import-type-side-effects/
@@ -233,22 +235,22 @@ export default {
   // Disallow this keywords outside of classes or class-like objects.
   // https://typescript-eslint.io/rules/no-invalid-this/
   // use eslint rule
-  'no-invalid-this': 'off',
+  'no-invalid-this': buildInRules['no-invalid-this'],
 
   // Disallow function declarations that contain unsafe references inside loop statements.
   // https://typescript-eslint.io/rules/no-loop-func/
   // use eslint rule
-  'no-loop-func': 'off',
+  'no-loop-func': buildInRules['no-loop-func'],
 
   // Disallow magic numbers.
   // https://typescript-eslint.io/rules/no-magic-numbers/
   // use eslint rule
-  'no-magic-numbers': 'off',
+  'no-magic-numbers': buildInRules['no-magic-numbers'],
 
   // Disallow variable redeclaration.
   // https://typescript-eslint.io/rules/no-redeclare/
   // use eslint rule
-  'no-redeclare': 'off',
+  'no-redeclare': buildInRules['no-redeclare'],
 
   // Prefer the newer ES6-style imports over require().
   // https://typescript-eslint.io/rules/no-require-imports/
@@ -257,11 +259,11 @@ export default {
   // Disallow specified modules when loaded by import.
   // https://typescript-eslint.io/rules/no-restricted-imports/
   // use eslint rule
-  'no-restricted-imports': 'off',
+  'no-restricted-imports': buildInRules['no-restricted-imports'],
 
   // Disallow variable declarations from shadowing variables declared in the outer scope.
   // https://typescript-eslint.io/rules/no-shadow/
-  'no-shadow': 'off',
+  'no-shadow': buildInRules['no-shadow'],
 
   // Disallow unnecessary namespace qualifiers.
   // https://typescript-eslint.io/rules/no-unnecessary-qualifier/
@@ -274,15 +276,16 @@ export default {
   // Disallow unused expressions.
   // https://typescript-eslint.io/rules/no-unused-expressions/
   // use eslint rule
-  'no-unused-expressions': 'off',
+  'no-unused-expressions': buildInRules['no-unused-expressions'],
 
   // Disallow the use of variables before they are defined.
   // https://typescript-eslint.io/rules/no-use-before-define/
   'no-use-before-define': [
-    'error',
+    buildInRules['no-use-before-define'][0],
     {
-      enums:                true,
-      typedefs:             true,
+      ...Object(buildInRules['no-use-before-define'][1]),
+      enums: true,
+      typedefs: true,
       ignoreTypeReferences: false,
     },
   ],
@@ -298,7 +301,7 @@ export default {
   // Require destructuring from arrays and/or objects.
   // https://typescript-eslint.io/rules/prefer-destructuring/#enforcefordeclarationwithtypeannotation
   // use eslint rule
-  'prefer-destructuring': 'off',
+  'prefer-destructuring': buildInRules['prefer-destructuring'],
 
   // Require each enum member value to be explicitly initialized.
   // https://typescript-eslint.io/rules/prefer-enum-initializers/
@@ -339,14 +342,14 @@ export default {
   'strict-boolean-expressions': [
     'error',
     {
-      allowString:                                            false,
-      allowNumber:                                            false,
-      allowNullableObject:                                    false,
-      allowNullableBoolean:                                   false,
-      allowNullableString:                                    false,
-      allowNullableNumber:                                    false,
-      allowNullableEnum:                                      false,
-      allowAny:                                               false,
+      allowString: false,
+      allowNumber: false,
+      allowNullableObject: false,
+      allowNullableBoolean: false,
+      allowNullableString: false,
+      allowNullableNumber: false,
+      allowNullableEnum: false,
+      allowAny: false,
       allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
     },
   ],
@@ -360,13 +363,13 @@ export default {
   typedef: [
     'error',
     {
-      arrayDestructuring:                false,
-      arrowParameter:                    false,
-      memberVariableDeclaration:         false,
-      objectDestructuring:               false,
-      parameter:                         false,
-      propertyDeclaration:               true,
-      variableDeclaration:               false,
+      arrayDestructuring: false,
+      arrowParameter: false,
+      memberVariableDeclaration: false,
+      objectDestructuring: false,
+      parameter: false,
+      propertyDeclaration: true,
+      variableDeclaration: false,
       variableDeclarationIgnoreFunction: false,
     },
   ],

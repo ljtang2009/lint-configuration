@@ -16,11 +16,6 @@ const pluginNameArray = [
  * @throws 如果输入的规则名称不是非空字符串，则抛出错误。
  */
 function getRuleNameWithoutPlugin(ruleName: string): { pluginName: string | undefined; ruleNameWithoutPlugin: string; ruleName: string } {
-  // 验证输入是否为非空字符串
-  if (ruleName.trim() === '') {
-    throw new Error('Invalid input: ruleName must be a non-empty string.');
-  }
-
   // 处理规则名称中包含 '/' 的情况，即包含插件名称
   if (ruleName.includes('/')) {
     // 使用 '/' 分割字符串以获取插件名称和规则名称
@@ -51,30 +46,18 @@ function getRuleNameWithoutPlugin(ruleName: string): { pluginName: string | unde
  * @returns 返回一个包含匹配规则名称的数组；如果无匹配或发生错误，则返回空数组。
  */
 function getRulesWithRuleNameWithoutPlugin(rules: Object, newRuleName: string): Array<string> {
-  let newRuleNameWithoutPlugin;
-  try {
-    // 尝试从新规则名称中移除插件信息
-    const ruleInfo = getRuleNameWithoutPlugin(newRuleName);
-    // 确保不直接覆盖外部变量
-    newRuleNameWithoutPlugin = ruleInfo.ruleNameWithoutPlugin;
-  } catch (error) {
-    console.error('处理 newRuleName 时发生错误:', error);
-    return []; // 在处理 newRuleName 时发生错误，返回空数组
-  }
+  // 尝试从新规则名称中移除插件信息
+  const ruleInfo = getRuleNameWithoutPlugin(newRuleName);
+  // 确保不直接覆盖外部变量
+  const newRuleNameWithoutPlugin = ruleInfo.ruleNameWithoutPlugin;
 
   const ruleNames = new Set(Object.keys(rules)); // 使用 Set 提高查找效率
   const result = [];
 
   for (const ruleName of ruleNames) {
-    let ruleNameWithoutPlugin;
-    try {
-      // 尝试从当前规则名称中移除插件信息
-      const ruleInfo = getRuleNameWithoutPlugin(ruleName);
-      ruleNameWithoutPlugin = ruleInfo.ruleNameWithoutPlugin;
-    } catch (error) {
-      console.error('处理 ruleName 时发生错误:', error);
-      continue; // 在处理 ruleName 时发生错误，继续处理下一个规则
-    }
+    // 尝试从当前规则名称中移除插件信息
+    const ruleInfo = getRuleNameWithoutPlugin(ruleName);
+    const { ruleNameWithoutPlugin } = ruleInfo;
 
     // 如果规则名称（不包含插件信息）匹配，则将规则名称添加到结果列表中
     if (newRuleNameWithoutPlugin === ruleNameWithoutPlugin) {

@@ -1,3 +1,16 @@
+# [0.2.0](https://github.com/ljtang2009/lint-configuration/compare/v0.1.5...v0.2.0) (2024-05-11)
+
+
+### Bug Fixes
+
+* :bug: update rule ([463cb6c](https://github.com/ljtang2009/lint-configuration/commit/463cb6c9ce1074872133be3d5391ae15c2682044))
+* :bug: 修改 disableDuplicatedRules ([31087e8](https://github.com/ljtang2009/lint-configuration/commit/31087e8acde0c9fcbc1268423976bd340c315d6b))
+
+
+### Features
+
+* :sparkles: 可用性更新 ([ab0abcc](https://github.com/ljtang2009/lint-configuration/commit/ab0abccc3ceeed9fc52a0975a3d5072f3f48bebd))
+
 ## [0.1.5](https://github.com/ljtang2009/lint-configuration/compare/v0.1.4...v0.1.5) (2024-05-05)
 
 

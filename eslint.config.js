@@ -1,5 +1,5 @@
 import globals from 'globals';
-import { eslint } from './dist/index.js';
+import { eslint, disableDuplicatedRules } from './dist/index.js';
 import _ from 'lodash';
 import { dirname, join } from 'desm';
 
@@ -7,11 +7,12 @@ const __dirname = dirname(import.meta.url);
 
 const baseConfig = _.merge(
   _.cloneDeep(eslint.buildIn.default),
-  eslint.stylistic.default,
+  eslint.stylisticPlus.default,
+  eslint.stylisticJs.default,
   {
     languageOptions: {
       sourceType: 'module',
-      globals:    {
+      globals: {
         ...globals.node,
         ...globals.jest,
       },
@@ -19,12 +20,17 @@ const baseConfig = _.merge(
   },
 );
 
-const baseTSConfig = _.merge(_.cloneDeep(baseConfig), eslint.ts.default);
+const baseTSConfig = _.merge(
+  _.cloneDeep(baseConfig),
+  eslint.stylisticTs.default,
+  eslint.ts.default,
+);
 
-export default [
+let config = [
   {
+    name: 'js',
     ..._.merge(_.cloneDeep(baseConfig), {
-      files:   ['**/*.js', '**/*.cjs', '**/*.mjs'],
+      files: ['**/*.js', '**/*.cjs', '**/*.mjs'],
       ignores: [
         'dist/**/*',
         'coverage/**/*',
@@ -32,44 +38,48 @@ export default [
     }),
   },
   {
+    name: 'ts/src',
     ..._.merge(_.cloneDeep(baseTSConfig), {
-      files:           ['src/**/*.ts'],
-      ignores:         ['src/**/*.spec.ts'],
+      files: ['src/**/*.ts'],
+      ignores: ['src/**/*.spec.ts'],
       languageOptions: {
         parserOptions: {
-          project:         join(import.meta.url, 'tsconfig.json'),
+          project: join(import.meta.url, 'tsconfig.json'),
           tsconfigRootDir: __dirname,
         },
       },
     }),
   },
   {
+    name: 'ts/test',
     ..._.merge(_.cloneDeep(baseTSConfig), {
-      files:           ['src/**/*.spec.ts'],
+      files: ['src/**/*.spec.ts'],
       languageOptions: {
         parserOptions: {
-          project:         join(import.meta.url, 'tsconfig.test.json'),
+          project: join(import.meta.url, 'tsconfig.test.json'),
           tsconfigRootDir: __dirname,
         },
       },
     }, eslint.jest.default),
   },
   {
+    name: 'ts/root',
     ..._.merge(_.cloneDeep(baseTSConfig), {
       files: [
         '*.ts',
       ],
       languageOptions: {
         parserOptions: {
-          project:         join(import.meta.url, 'tsconfig.node.json'),
+          project: join(import.meta.url, 'tsconfig.node.json'),
           tsconfigRootDir: __dirname,
         },
       },
     }),
   },
   {
+    name: 'json',
     ..._.merge(_.cloneDeep(eslint.json.default), {
-      files:   ['**/*.json', '**/*.jsonc', '**/*.json5'],
+      files: ['**/*.json', '**/*.jsonc', '**/*.json5'],
       ignores: [
         'coverage/**/*',
         'package.json',
@@ -77,3 +87,8 @@ export default [
     }),
   },
 ];
+
+// 禁用重复规则
+config = disableDuplicatedRules(config);
+
+export default config;

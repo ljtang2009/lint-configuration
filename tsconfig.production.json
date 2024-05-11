@@ -1,8 +1,11 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    // Emit
-    "outDir": "dist"
+    "outDir": "dist",
+    "emitDeclarationOnly": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["src/**/*.spec.ts"]

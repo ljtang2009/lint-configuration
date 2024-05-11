@@ -1,5 +1,7 @@
 // @see https://typescript-eslint.io/rules/?=stylistic
 
+import buildInRules from '@/eslint/buildIn/rules/index.js';
+
 export default {
   // Require that function overload signatures be consecutive.
   // https://typescript-eslint.io/rules/adjacent-overload-signatures
@@ -30,7 +32,7 @@ export default {
   'consistent-type-assertions': [
     'error',
     {
-      assertionStyle:              'as',
+      assertionStyle: 'as',
       objectLiteralTypeAssertions: 'never',
     },
   ],
@@ -42,7 +44,7 @@ export default {
   // Enforce dot notation whenever possible.
   // https://typescript-eslint.io/rules/dot-notation/
   // use eslint rule
-  'dot-notation': ['off'],
+  'dot-notation': buildInRules['dot-notation'],
 
   // Disallow non-null assertion in locations that may be confusing.
   // https://typescript-eslint.io/rules/no-confusing-non-null-assertion/
@@ -51,7 +53,7 @@ export default {
   // Disallow empty functions.
   // https://typescript-eslint.io/rules/no-empty-function/
   // use eslint rule
-  'no-empty-function': 'off',
+  'no-empty-function': buildInRules['no-empty-function'],
 
   // Disallow the declaration of empty interfaces.
   // https://typescript-eslint.io/rules/no-empty-interface/

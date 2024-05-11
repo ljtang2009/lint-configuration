@@ -33,33 +33,33 @@ export default {
   // @see https://github.com/DavidAnson/markdownlint/blob/main/doc/md007.md
   MD007: {
   // Spaces for indent
-    indent:         2,
+    indent: 2,
     // Whether to indent the first level of the list
     start_indented: false,
     // Spaces for first level indent (when start_indented is set)
-    start_indent:   2,
+    start_indent: 2,
   },
 
   // no-trailing-spaces - Trailing spaces
   // @see https://github.com/DavidAnson/markdownlint/blob/main/doc/md009.md
   MD009: {
   // Spaces for line break
-    br_spaces:             2,
+    br_spaces: 2,
     // Allow spaces for empty lines in list items
     list_item_empty_lines: false,
     // Include unnecessary breaks
-    strict:                false,
+    strict: false,
   },
 
   // no-hard-tabs - Hard tabs
   // @see https://github.com/DavidAnson/markdownlint/blob/main/doc/md010.md
   MD010: {
   // Include code blocks
-    code_blocks:           true,
+    code_blocks: true,
     // Fenced code languages to ignore
     ignore_code_languages: [],
     // Number of spaces for each hard tab
-    spaces_per_tab:        1,
+    spaces_per_tab: 1,
   },
 
   // no-reversed-links - Reversed link syntax
@@ -139,7 +139,7 @@ export default {
   // @see https://github.com/DavidAnson/markdownlint/blob/main/doc/md025.md
   MD025: {
   // Heading level
-    level:              1,
+    level: 1,
     // RegExp for matching title in front matter
     front_matter_title: '^\\s*title\\s*[:=]',
   },
@@ -174,9 +174,9 @@ export default {
     // Spaces for single-line ordered list items
     ol_single: 1,
     // Spaces for multi-line unordered list items
-    ul_multi:  1,
+    ul_multi: 1,
     // Spaces for multi-line ordered list items
-    ol_multi:  1,
+    ol_multi: 1,
   },
 
   // blanks-around-fences - Fenced code blocks should be surrounded by blank lines
@@ -235,14 +235,14 @@ export default {
   // List of languages
     allowed_languages: [],
     // Require language only
-    language_only:     false,
+    language_only: false,
   },
 
   // first-line-heading/first-line-h1 - First line in a file should be a top-level heading
   // @see https://github.com/DavidAnson/markdownlint/blob/main/doc/md041.md
   MD041: {
   // Heading level
-    level:              1,
+    level: 1,
     // RegExp for matching title in front matter
     front_matter_title: '^\\s*title\\s*[:=]',
   },
@@ -259,9 +259,9 @@ export default {
   // @see https://github.com/DavidAnson/markdownlint/blob/main/doc/md044.md
   MD044: {
   // List of proper names
-    names:         [],
+    names: [],
     // Include code blocks
-    code_blocks:   true,
+    code_blocks: true,
     // Include HTML elements
     html_elements: true,
   },
@@ -324,15 +324,15 @@ export default {
   // @see https://github.com/DavidAnson/markdownlint/blob/main/doc/md054.md
   MD054: {
   // Allow autolinks
-    autolink:   true,
+    autolink: true,
     // Allow inline links and images
-    inline:     true,
+    inline: true,
     // Allow full reference links and images
-    full:       true,
+    full: true,
     // Allow collapsed reference links and images
-    collapsed:  true,
+    collapsed: true,
     // Allow shortcut reference links and images
-    shortcut:   true,
+    shortcut: true,
     // Allow URLs as inline links
     url_inline: true,
   },

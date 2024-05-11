@@ -24,10 +24,10 @@ export default {
   camelcase: [
     'error',
     {
-      properties:          'always',
+      properties: 'always',
       ignoreDestructuring: false,
-      ignoreImports:       false,
-      ignoreGlobals:       false,
+      ignoreImports: false,
+      ignoreGlobals: false,
     },
   ],
 
@@ -40,7 +40,7 @@ export default {
   'class-methods-use-this': [
     'error',
     {
-      exceptMethods:         [],
+      exceptMethods: [],
       enforceForClassFields: true,
     },
   ],
@@ -148,7 +148,7 @@ export default {
 
   // limits the number of parameters that can be used in the function declaration.
   // https://eslint.org/docs/latest/rules/max-params
-  'max-params': ['error', 3],
+  'max-params': ['error', { max: 3 }],
 
   // specify the maximum number of statement allowed in a function
   // https://eslint.org/docs/latest/rules/max-statements
@@ -184,11 +184,11 @@ export default {
 
   // disallow use of console
   // https://eslint.org/docs/latest/rules/no-console
-  'no-console': 'error',
+  'no-console': ['error', { allow: ['warn', 'error'] }],
 
   // disallow use of the continue statement
   // https://eslint.org/docs/rules/no-continue
-  'no-continue': 'error',
+  'no-continue': 'off',
 
   // disallow deletion of variables
   // https://eslint.org/docs/latest/rules/no-delete-var
@@ -353,7 +353,7 @@ export default {
   'no-param-reassign': [
     'error',
     {
-      props:                          true,
+      props: true,
       ignorePropertyModificationsFor: [
         'acc', // for reduce accumulators
         'accumulator', // for reduce accumulators
@@ -419,7 +419,7 @@ export default {
   'no-restricted-imports': [
     'off',
     {
-      paths:    [],
+      paths: [],
       patterns: [],
     },
   ],
@@ -429,59 +429,59 @@ export default {
   'no-restricted-properties': [
     'error',
     {
-      object:   'arguments',
+      object: 'arguments',
       property: 'callee',
-      message:  'arguments.callee is deprecated',
+      message: 'arguments.callee is deprecated',
     },
     {
-      object:   'global',
+      object: 'global',
       property: 'isFinite',
-      message:  'Please use Number.isFinite instead',
+      message: 'Please use Number.isFinite instead',
     },
     {
-      object:   'self',
+      object: 'self',
       property: 'isFinite',
-      message:  'Please use Number.isFinite instead',
+      message: 'Please use Number.isFinite instead',
     },
     {
-      object:   'window',
+      object: 'window',
       property: 'isFinite',
-      message:  'Please use Number.isFinite instead',
+      message: 'Please use Number.isFinite instead',
     },
     {
-      object:   'global',
+      object: 'global',
       property: 'isNaN',
-      message:  'Please use Number.isNaN instead',
+      message: 'Please use Number.isNaN instead',
     },
     {
-      object:   'self',
+      object: 'self',
       property: 'isNaN',
-      message:  'Please use Number.isNaN instead',
+      message: 'Please use Number.isNaN instead',
     },
     {
-      object:   'window',
+      object: 'window',
       property: 'isNaN',
-      message:  'Please use Number.isNaN instead',
+      message: 'Please use Number.isNaN instead',
     },
     {
       property: '__defineGetter__',
-      message:  'Please use Object.defineProperty instead.',
+      message: 'Please use Object.defineProperty instead.',
     },
     {
       property: '__defineSetter__',
-      message:  'Please use Object.defineProperty instead.',
+      message: 'Please use Object.defineProperty instead.',
     },
     {
-      object:   'Math',
+      object: 'Math',
       property: 'pow',
-      message:  'Use the exponentiation operator (**) instead.',
+      message: 'Use the exponentiation operator (**) instead.',
     },
   ],
 
   // disallow certain syntax forms
   // https://eslint.org/docs/rules/no-restricted-syntax
   'no-restricted-syntax': [
-    'error',
+    'off',
     {
       selector: 'ForInStatement',
       message:
@@ -543,11 +543,11 @@ export default {
   // disallow dangling underscores in identifiers
   // https://eslint.org/docs/rules/no-underscore-dangle
   'no-underscore-dangle': [
-    'error',
+    'off',
     {
-      allow:                ['__dirname'],
-      allowAfterThis:       false,
-      allowAfterSuper:      false,
+      allow: ['__dirname'],
+      allowAfterThis: false,
+      allowAfterSuper: false,
       enforceInMethodNames: true,
     },
   ],
@@ -562,8 +562,8 @@ export default {
   'no-unused-expressions': [
     'error',
     {
-      allowShortCircuit:    false,
-      allowTernary:         false,
+      allowShortCircuit: false,
+      allowTernary: false,
       allowTaggedTemplates: false,
     },
   ],
@@ -602,8 +602,8 @@ export default {
     'error',
     {
       ignoreDestructuring: false,
-      ignoreImport:        false,
-      ignoreExport:        false,
+      ignoreImport: false,
+      ignoreExport: false,
     },
   ],
 
@@ -651,7 +651,7 @@ export default {
     'error',
     {
       allowNamedFunctions: false,
-      allowUnboundThis:    true,
+      allowUnboundThis: true,
     },
   ],
 
@@ -660,7 +660,7 @@ export default {
   'prefer-const': [
     'error',
     {
-      destructuring:          'any',
+      destructuring: 'any',
       ignoreReadBeforeAssign: true,
     },
   ],
@@ -671,11 +671,11 @@ export default {
     'error',
     {
       VariableDeclarator: {
-        array:  false,
+        array: false,
         object: true,
       },
       AssignmentExpression: {
-        array:  true,
+        array: true,
         object: false,
       },
     },

@@ -1,5 +1,7 @@
 // @see https://typescript-eslint.io/rules/?=xrecommended-strict
 
+import buildInRules from '@/eslint/buildIn/rules/index.js';
+
 export default {
   // Disallow using the delete operator on array values.
   // https://typescript-eslint.io/rules/no-array-delete/
@@ -39,7 +41,7 @@ export default {
 
   // Disallow throwing literals as exceptions.
   // https://typescript-eslint.io/rules/no-throw-literal/
-  'no-throw-literal': 'off',
+  'only-throw-error': buildInRules['no-throw-literal'],
 
   // Disallow unnecessary equality comparisons against boolean literals.
   // https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare/
@@ -56,7 +58,7 @@ export default {
   // Disallow unnecessary constructors.
   // https://typescript-eslint.io/rules/no-useless-constructor/
   // use eslint rule
-  'no-useless-constructor': 'off',
+  'no-useless-constructor': buildInRules['no-useless-constructor'],
 
   // Disallow unnecessary template literals.
   // https://typescript-eslint.io/rules/no-useless-template-literals/
@@ -77,7 +79,7 @@ export default {
   // Require using Error objects as Promise rejection reasons.
   // https://typescript-eslint.io/rules/prefer-promise-reject-errors/
   // use eslint rule
-  'prefer-promise-reject-errors': 'off',
+  'prefer-promise-reject-errors': buildInRules['prefer-promise-reject-errors'],
 
   // Enforce using type parameter when calling Array#reduce instead of casting.
   // https://typescript-eslint.io/rules/prefer-reduce-type-parameter/

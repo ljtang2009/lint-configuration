@@ -4,7 +4,7 @@ export default {
   'array-bracket-newline': ['error',
                             {
                               multiline: true,
-                              minItems:  null,
+                              minItems: null,
                             }],
 
   // disallow or enforce spaces inside of brackets
@@ -31,8 +31,8 @@ export default {
   // https://ota-meshi.github.io/eslint-plugin-jsonc/rules/key-spacing.html
   'key-spacing': ['error', {
     beforeColon: false,
-    afterColon:  true,
-    mode:        'strict',
+    afterColon: true,
+    mode: 'strict',
   }],
 
   // disallow duplicate keys in object literals

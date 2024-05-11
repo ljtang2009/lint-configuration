@@ -1,6 +1,4 @@
-import { addPluginName } from '../../util/ruleTools.js';
-
-const rules = {
+export default {
   // Disallow disabled tests
   // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-disabled-tests.md
   'no-disabled-tests': ['off'],
@@ -16,12 +14,4 @@ const rules = {
   // Prefer importing Jest globals
   // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-importing-jest-globals.md
   'prefer-importing-jest-globals': ['off'],
-};
-
-function getRules(pluginName: string): Record<string, unknown> {
-  return addPluginName(pluginName, rules);
-}
-
-export default {
-  getRules,
 };

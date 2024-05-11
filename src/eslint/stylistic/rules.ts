@@ -1,8 +1,6 @@
 // @see https://eslint.style/rules
 
-import { addPluginName } from '../../util/ruleTools.js';
-
-const rules = {
+export default {
   // Enforce linebreaks after opening and before closing array brackets
   // https://eslint.style/rules/default/array-bracket-newline
   'array-bracket-newline': ['error', 'consistent'],
@@ -85,17 +83,17 @@ const rules = {
     'error',
     2,
     {
-      SwitchCase:               1,
-      VariableDeclarator:       'first',
-      FunctionDeclaration:      { parameters: 'first', body: 1 },
-      FunctionExpression:       { parameters: 'first', body: 1 },
-      CallExpression:           { arguments: 'first' },
-      ArrayExpression:          'first',
-      ObjectExpression:         'first',
-      ImportDeclaration:        'first',
-      flatTernaryExpressions:   true,
+      SwitchCase: 1,
+      VariableDeclarator: 'first',
+      FunctionDeclaration: { parameters: 'first', body: 1 },
+      FunctionExpression: { parameters: 'first', body: 1 },
+      CallExpression: { arguments: 'first' },
+      ArrayExpression: 'first',
+      ObjectExpression: 'first',
+      ImportDeclaration: 'first',
+      flatTernaryExpressions: true,
       offsetTernaryExpressions: true,
-      ignoreComments:           false,
+      ignoreComments: false,
     },
   ],
 
@@ -181,18 +179,18 @@ const rules = {
   // https://eslint.style/rules/default/jsx-self-closing-comp
   'jsx-self-closing-comp': ['error', {
     component: true,
-    html:      true,
+    html: true,
   }],
 
   // Enforce props alphabetical sorting
   // https://eslint.style/rules/default/jsx-sort-props
   'jsx-sort-props': ['error', {
-    callbacksLast:  true,
+    callbacksLast: true,
     shorthandFirst: true,
-    ignoreCase:     false,
-    multiline:      'ignore',
-    reservedFirst:  ['children', 'dangerouslySetInnerHTML', 'key', 'ref'],
-    locale:         'auto',
+    ignoreCase: false,
+    multiline: 'ignore',
+    reservedFirst: ['children', 'dangerouslySetInnerHTML', 'key', 'ref'],
+    locale: 'auto',
   }],
 
   // Enforce whitespace in and around the JSX opening and closing brackets
@@ -205,26 +203,26 @@ const rules = {
   // https://eslint.style/rules/default/jsx-wrap-multilines
   'jsx-wrap-multilines': ['error', {
     declaration: 'parens-new-line',
-    assignment:  'parens-new-line',
-    return:      'parens-new-line',
-    arrow:       'parens-new-line',
-    condition:   'parens-new-line',
-    logical:     'parens-new-line',
-    prop:        'parens-new-line',
+    assignment: 'parens-new-line',
+    return: 'parens-new-line',
+    arrow: 'parens-new-line',
+    condition: 'parens-new-line',
+    logical: 'parens-new-line',
+    prop: 'parens-new-line',
   }],
 
   // Enforce consistent spacing between keys and values in object literal properties
   // https://eslint.style/rules/default/key-spacing
   'key-spacing': ['error', {
     beforeColon: false,
-    afterColon:  true,
-    mode:        'strict',
-    align:       {
-      beforeColon: false,
-      afterColon:  true,
-      on:          'value',
-      mode:        'strict',
-    },
+    afterColon: true,
+    mode: 'strict',
+    // align:       {
+    //   beforeColon: false,
+    //   afterColon:  true,
+    //   on:          'value',
+    //   mode:        'strict',
+    // },
     // multiLine: {
     //   "beforeColon": false,
     //   "afterColon": true,
@@ -242,8 +240,11 @@ const rules = {
   // https://eslint.style/rules/default/keyword-spacing
   'keyword-spacing': ['error', {
     before: true,
-    after:  true,
+    after: true,
   }],
+
+  // https://eslint.style/rules/default/line-comment-position
+  'line-comment-position': ['off'],
 
   // Enforce consistent linebreak style
   // eslint.style/rules/default/linebreak-style
@@ -259,14 +260,15 @@ const rules = {
 
   // Enforce a maximum line length
   // https://eslint.style/rules/default/max-len
-  'max-len': ['error', {
-    tabWidth:               2,
-    ignoreComments:         true,
+  'max-len': ['off', {
+    code: 100,
+    tabWidth: 2,
+    ignoreComments: true,
     ignoreTrailingComments: true,
-    ignoreUrls:             true,
-    ignoreStrings:          true,
+    ignoreUrls: true,
+    ignoreStrings: true,
     ignoreTemplateLiterals: true,
-    ignoreRegExpLiterals:   true,
+    ignoreRegExpLiterals: true,
   }],
 
   // Enforce a maximum number of statements allowed per line
@@ -277,15 +279,18 @@ const rules = {
   // https://eslint.style/rules/default/member-delimiter-style
   'member-delimiter-style': ['error', {
     multiline: {
-      delimiter:   'semi',
+      delimiter: 'semi',
       requireLast: true,
     },
     singleline: {
-      delimiter:   'semi',
+      delimiter: 'semi',
       requireLast: false,
     },
     multilineDetection: 'brackets',
   }],
+
+  // https://eslint.style/rules/default/multiline-comment-style
+  'multiline-comment-style': ['off'],
 
   // Enforce newlines between operands of ternary expressions
   // https://eslint.style/rules/default/multiline-ternary
@@ -305,7 +310,7 @@ const rules = {
 
   // Disallow unnecessary parentheses
   // https://eslint.style/rules/default/no-extra-parens
-  'no-extra-parens': 'off',
+  'no-extra-parens': 'error',
 
   // Disallow unnecessary semicolons
   // https://eslint.style/rules/default/no-extra-semi
@@ -336,11 +341,11 @@ const rules = {
   // https://eslint.style/rules/default/no-multi-spaces
   'no-multi-spaces': ['error', {
     ignoreEOLComments: true,
-    exceptions:        {
-      Property:           true,
-      BinaryExpression:   false,
+    exceptions: {
+      Property: true,
+      BinaryExpression: false,
       VariableDeclarator: false,
-      ImportDeclaration:  false,
+      ImportDeclaration: false,
     },
     includeTabs: true,
   }],
@@ -371,8 +376,8 @@ const rules = {
   // Enforce consistent line breaks after opening and before closing braces
   // https://eslint.style/rules/default/object-curly-newline
   'object-curly-newline': ['error', {
-    ObjectExpression:  { minProperties: 4, multiline: true, consistent: true },
-    ObjectPattern:     { minProperties: 4, multiline: true, consistent: true },
+    ObjectExpression: { minProperties: 4, multiline: true, consistent: true },
+    ObjectPattern: { minProperties: 4, multiline: true, consistent: true },
     ImportDeclaration: { minProperties: 4, multiline: true, consistent: true },
     ExportDeclaration: { minProperties: 4, multiline: true, consistent: true },
   }],
@@ -396,8 +401,8 @@ const rules = {
   // Require or disallow padding within blocks
   // https://eslint.style/rules/default/padded-blocks
   'padded-blocks': ['error', {
-    blocks:   'never',
-    classes:  'never',
+    blocks: 'never',
+    classes: 'never',
     switches: 'never',
   }, {
     allowSingleLineBlocks: true,
@@ -438,8 +443,8 @@ const rules = {
   // Enforce consistent spacing before `function` definition opening parenthesis
   // https://eslint.style/rules/default/space-before-function-paren
   'space-before-function-paren': ['error', {
-    anonymous:  'always',
-    named:      'never',
+    anonymous: 'always',
+    named: 'never',
     asyncArrow: 'always',
   }],
 
@@ -454,7 +459,7 @@ const rules = {
   // Enforce consistent spacing before or after unary operators
   // https://eslint.style/rules/default/space-unary-ops
   'space-unary-ops': ['error', {
-    words:    true,
+    words: true,
     nonwords: false,
   }],
 
@@ -463,12 +468,12 @@ const rules = {
   'spaced-comment': ['error', 'always', {
     line: {
       exceptions: ['-', '+'],
-      markers:    ['=', '!', '/'],
+      markers: ['=', '!', '/'],
     },
     block: {
       exceptions: ['-', '+'],
-      markers:    ['=', '!', ':', '::'],
-      balanced:   true,
+      markers: ['=', '!', ':', '::'],
+      balanced: true,
     },
   }],
 
@@ -507,12 +512,4 @@ const rules = {
   // Require or disallow spacing around the `*` in `yield*` expressions
   // https://eslint.style/rules/default/yield-star-spacing
   'yield-star-spacing': ['error', 'after'],
-};
-
-function getRules(pluginName: string): Record<string, unknown> {
-  return addPluginName(pluginName, rules);
-}
-
-export default {
-  getRules,
 };

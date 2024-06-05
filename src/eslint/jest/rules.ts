@@ -14,4 +14,8 @@ export default {
   // Prefer importing Jest globals
   // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-importing-jest-globals.md
   'prefer-importing-jest-globals': ['off'],
+
+  // Enforce unbound methods are called with their expected scope
+  // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
+  'unbound-method ': ['off'],
 };

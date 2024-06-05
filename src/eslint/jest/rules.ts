@@ -17,5 +17,5 @@ export default {
 
   // Enforce unbound methods are called with their expected scope
   // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
-  'unbound-method ': ['off'],
+  'unbound-method': ['off'],
 };

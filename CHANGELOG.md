@@ -1,3 +1,10 @@
+## [0.2.2](https://github.com/ljtang2009/lint-configuration/compare/v0.2.1...v0.2.2) (2024-06-05)
+
+
+### Bug Fixes
+
+* :bug: fix error rulename ([bca5d34](https://github.com/ljtang2009/lint-configuration/commit/bca5d3436d53a8dda6b95a989b2313f91d0c83e6))
+
 ## [0.2.1](https://github.com/ljtang2009/lint-configuration/compare/v0.2.0...v0.2.1) (2024-06-05)
 
 

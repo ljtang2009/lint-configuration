@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/ljtang2009/lint-configuration/compare/v0.2.0...v0.2.1) (2024-06-05)
+
+
+### Bug Fixes
+
+* :bug: disable unbound-method in jest ([4e76041](https://github.com/ljtang2009/lint-configuration/commit/4e760412ab00929f6f920f16b272aa117e47f647))
+
 # [0.2.0](https://github.com/ljtang2009/lint-configuration/compare/v0.1.5...v0.2.0) (2024-05-11)
 
 

@@ -8,11 +8,6 @@ export default {
   // use eslint rule
   'class-methods-use-this': buildInRules['class-methods-use-this'],
 
-  // Require return statements to either always or never specify values.
-  // https://typescript-eslint.io/rules/consistent-return/
-  // XXX emit error: Could not find "consistent-return" in plugin "@typescript-eslint", so disable this rule
-  // 'consistent-return': 'error',
-
   // Enforce consistent usage of type exports.
   // https://typescript-eslint.io/rules/consistent-type-exports/
   'consistent-type-exports': 'off',
@@ -32,7 +27,7 @@ export default {
   'default-param-last': buildInRules['default-param-last'],
 
   // Require explicit return types on functions and class methods.
-  // https://typescript-eslint.io/rules/
+  // https://typescript-eslint.io/rules/explicit-function-return-type
   'explicit-function-return-type': 'off',
 
   // Require explicit accessibility modifiers on class properties and methods.

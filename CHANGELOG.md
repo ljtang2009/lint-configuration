@@ -1,3 +1,10 @@
+## [0.2.3](https://github.com/ljtang2009/lint-configuration/compare/v0.2.2...v0.2.3) (2024-07-29)
+
+
+### Bug Fixes
+
+* :bug: add test ([c8cf6ce](https://github.com/ljtang2009/lint-configuration/commit/c8cf6cea38b0968cb903c5df724fd23a2cb5d8d9))
+
 ## [0.2.2](https://github.com/ljtang2009/lint-configuration/compare/v0.2.1...v0.2.2) (2024-06-05)
 
 

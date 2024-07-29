@@ -1,3 +1,10 @@
+## [0.2.4](https://github.com/ljtang2009/lint-configuration/compare/v0.2.3...v0.2.4) (2024-07-29)
+
+
+### Bug Fixes
+
+* :bug: add rule ([df4f6f0](https://github.com/ljtang2009/lint-configuration/commit/df4f6f0d97254bec1a3814f650ccce53ccb72ca1))
+
 ## [0.2.3](https://github.com/ljtang2009/lint-configuration/compare/v0.2.2...v0.2.3) (2024-07-29)
 
 

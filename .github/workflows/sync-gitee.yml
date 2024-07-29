@@ -3,8 +3,6 @@ name: 🔀 Sync mirror to Gitee
 on:
   push:
   workflow_dispatch:
-  schedule:
-    - cron: '0 1 * * *'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

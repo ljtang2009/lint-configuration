@@ -1,6 +1,6 @@
 import stylisticTs from '@stylistic/eslint-plugin-ts';
-import rules from './rules.js';
-import { addPluginName } from '@/util/ruleTools.js';
+import rules from './rules.ts';
+import { addPluginName } from '@/util/ruleTools.ts';
 import parserTs from '@typescript-eslint/parser';
 
 const pluginName = '@stylistic/ts';

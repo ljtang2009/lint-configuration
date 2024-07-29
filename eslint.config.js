@@ -1,9 +1,10 @@
 import globals from 'globals';
 import { eslint, disableDuplicatedRules } from './dist/index.js';
 import _ from 'lodash';
-import { dirname, join } from 'desm';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const __dirname = dirname(import.meta.url);
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const baseConfig = _.merge(
   _.cloneDeep(eslint.buildIn.default),
@@ -14,7 +15,6 @@ const baseConfig = _.merge(
       sourceType: 'module',
       globals: {
         ...globals.node,
-        ...globals.jest,
       },
     },
   },
@@ -44,7 +44,7 @@ let config = [
       ignores: ['src/**/*.spec.ts'],
       languageOptions: {
         parserOptions: {
-          project: join(import.meta.url, 'tsconfig.json'),
+          project: join(__dirname, 'tsconfig.json'),
           tsconfigRootDir: __dirname,
         },
       },
@@ -53,10 +53,10 @@ let config = [
   {
     name: 'ts/test',
     ..._.merge(_.cloneDeep(baseTSConfig), {
-      files: ['src/**/*.spec.ts'],
+      files: ['test/**/*.spec.ts', 'test/**/*.test.ts'],
       languageOptions: {
         parserOptions: {
-          project: join(import.meta.url, 'tsconfig.test.json'),
+          project: join(__dirname, 'tsconfig.json'),
           tsconfigRootDir: __dirname,
         },
       },
@@ -70,7 +70,7 @@ let config = [
       ],
       languageOptions: {
         parserOptions: {
-          project: join(import.meta.url, 'tsconfig.node.json'),
+          project: join(__dirname, 'tsconfig.node.json'),
           tsconfigRootDir: __dirname,
         },
       },
@@ -83,6 +83,7 @@ let config = [
       ignores: [
         'coverage/**/*',
         'package.json',
+        '.vscode/**/*',
       ],
     }),
   },

@@ -20,14 +20,12 @@
     "moduleResolution": "node16",
 
     // Language and Environment
-    "target": "es2022",
+    "target": "esnext",
 
     // Emit
     "declaration": true,
     "declarationMap": true,
     "downlevelIteration": true,
-    "importHelpers": true,
-    "noEmitOnError": true,
     "sourceMap": true,
 
     // JavaScript Support

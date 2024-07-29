@@ -1,6 +1,6 @@
-import * as eslint from '@/eslint/index.js';
-import getDuplicatedRules from './getDuplicatedRules.js';
-import showJSONWithBrowser from '../showJSONWithBrowser.js';
+import * as eslint from '@/eslint/index.ts';
+import getDuplicatedRules from './getDuplicatedRules.ts';
+import showJSONWithBrowser from '../showJSONWithBrowser.ts';
 
 const duplicatedRules = getDuplicatedRules(
   [

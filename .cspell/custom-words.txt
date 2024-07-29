@@ -3,6 +3,7 @@ desm
 Gitee
 iife
 lcov
+memfs
 redeclaration
 tseslint
 unspaced

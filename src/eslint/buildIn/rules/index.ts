@@ -1,7 +1,7 @@
 import js from '@eslint/js';
-import possibleProblems from './possibleProblems.js';
-import suggestions from './suggestions.js';
-import layoutFormatting from './layoutFormatting.js';
+import possibleProblems from './possibleProblems.ts';
+import suggestions from './suggestions.ts';
+import layoutFormatting from './layoutFormatting.ts';
 
 export default {
   ...js.configs.recommended.rules,

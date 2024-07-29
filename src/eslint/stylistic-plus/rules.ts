@@ -1,6 +1,6 @@
 // @see https://eslint.style/packages/plus
 
-import stylisticRules from '@/eslint/stylistic/rules.js';
+import stylisticRules from '@/eslint/stylistic/rules.ts';
 
 export default {
   // https://eslint.style/rules/plus/indent-binary-ops

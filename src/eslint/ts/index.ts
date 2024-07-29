@@ -1,6 +1,6 @@
-import rules from './rules/index.js';
+import rules from './rules/index.ts';
 import tseslint from 'typescript-eslint';
-import { addPluginName } from '@/util/ruleTools.js';
+import { addPluginName } from '@/util/ruleTools.ts';
 
 const pluginName = '@typescript-eslint';
 

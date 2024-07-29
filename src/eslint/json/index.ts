@@ -1,7 +1,7 @@
 import jsoncParser from 'jsonc-eslint-parser';
 import jsonc from 'eslint-plugin-jsonc';
-import rules from './rules/index.js';
-import { addPluginName } from '@/util/ruleTools.js';
+import rules from './rules/index.ts';
+import { addPluginName } from '@/util/ruleTools.ts';
 
 const pluginName = 'jsonc';
 

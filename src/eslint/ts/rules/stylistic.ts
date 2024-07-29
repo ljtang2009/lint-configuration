@@ -1,6 +1,6 @@
 // @see https://typescript-eslint.io/rules/?=stylistic
 
-import buildInRules from '@/eslint/buildIn/rules/index.js';
+import buildInRules from '@/eslint/buildIn/rules/index.ts';
 
 export default {
   // Require that function overload signatures be consecutive.

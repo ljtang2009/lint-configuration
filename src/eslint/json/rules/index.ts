@@ -1,5 +1,5 @@
-import jsonc from './jsonc.js';
-import extension from './extension.js';
+import jsonc from './jsonc.ts';
+import extension from './extension.ts';
 
 export default {
   ...jsonc,

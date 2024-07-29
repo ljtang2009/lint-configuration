@@ -1,5 +1,5 @@
-import config from './config.js';
-import globs from './globs.js';
+import config from './config.ts';
+import globs from './globs.ts';
 
 export default {
   config,

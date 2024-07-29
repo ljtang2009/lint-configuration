@@ -1,16 +1,18 @@
 import { defineConfig } from 'vite';
-import { join } from 'desm';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'node:url';
 
-const entry = join(import.meta.url, 'src/index.ts');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const entry = join(__dirname, 'src/index.ts');
 
 export default defineConfig({
   resolve: {
     alias: {
-      '@': join(import.meta.url, 'src'),
+      '@': join(__dirname, 'src'),
     },
   },
   build: {
-    outDir: join(import.meta.url, 'dist'),
+    outDir: join(__dirname, 'dist'),
     sourcemap: true,
     lib: {
       entry,

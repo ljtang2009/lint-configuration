@@ -1,6 +1,6 @@
 // @see https://typescript-eslint.io/rules/?=recommended
 
-import buildInRules from '@/eslint/buildIn/rules/index.js';
+import buildInRules from '@/eslint/buildIn/rules/index.ts';
 
 export default {
   // Disallow awaiting a value that is not a Thenable.

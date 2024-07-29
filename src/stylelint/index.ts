@@ -1,3 +1,3 @@
-export * as buildIn from './buildIn/index.js';
-export * as order from './order/index.js';
-export * as prettier from './prettier/index.js';
+export * as buildIn from './buildIn/index.ts';
+export * as order from './order/index.ts';
+export * as prettier from './prettier/index.ts';

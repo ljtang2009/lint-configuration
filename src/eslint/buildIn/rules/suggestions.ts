@@ -148,7 +148,7 @@ export default {
 
   // limits the number of parameters that can be used in the function declaration.
   // https://eslint.org/docs/latest/rules/max-params
-  'max-params': ['error', { max: 3 }],
+  'max-params': ['error', { max: 5 }],
 
   // specify the maximum number of statement allowed in a function
   // https://eslint.org/docs/latest/rules/max-statements

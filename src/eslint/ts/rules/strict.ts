@@ -1,6 +1,6 @@
 // @see https://typescript-eslint.io/rules/?=xrecommended-strict
 
-import buildInRules from '@/eslint/buildIn/rules/index.js';
+import buildInRules from '@/eslint/buildIn/rules/index.ts';
 
 export default {
   // Disallow using the delete operator on array values.

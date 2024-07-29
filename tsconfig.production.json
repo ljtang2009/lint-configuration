@@ -1,12 +1,16 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "emitDeclarationOnly": true,
+    // Modules
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "allowImportingTsExtensions": true,
+    // Emit
+    "outDir": "dist",
+    "emitDeclarationOnly": true,
+    // Language and Environment
+    "jsx": "react"
   },
-  "include": ["src"],
-  "exclude": ["src/**/*.spec.ts"]
+  "include": ["src"]
 }

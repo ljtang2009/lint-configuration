@@ -1,5 +1,5 @@
-import avoidErrors from './avoidErrors.js';
-import enforceConventions from './enforceConventions.js';
+import avoidErrors from './avoidErrors.ts';
+import enforceConventions from './enforceConventions.ts';
 
 export default {
   ...avoidErrors,

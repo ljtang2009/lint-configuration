@@ -1,7 +1,7 @@
-import base from './base.js';
-import stylistic from './stylistic.js';
-import recommended from './recommended.js';
-import strict from './strict.js';
+import base from './base.ts';
+import stylistic from './stylistic.ts';
+import recommended from './recommended.ts';
+import strict from './strict.ts';
 
 export default {
   ...base,

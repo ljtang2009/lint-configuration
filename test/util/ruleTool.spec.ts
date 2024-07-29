@@ -1,9 +1,10 @@
-import { describe, expect, it } from '@jest/globals';
-import { addPluginName } from './ruleTools';
+import {
+  describe, it, expect,
+} from 'vitest';
+import { addPluginName } from '@/util/ruleTools.ts';
 
 describe('addPluginName', () => {
   it('should add plugin name to rules object', () => {
-    expect.hasAssertions();
     const pluginName = 'myPlugin';
     const rules = {
       rule1: {},
@@ -18,7 +19,6 @@ describe('addPluginName', () => {
   });
 
   it('should add plugin name to rules array', () => {
-    expect.hasAssertions();
     const pluginName = 'myPlugin';
     const rules = [
       {

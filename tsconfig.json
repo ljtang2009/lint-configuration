@@ -1,6 +1,9 @@
 {
   "extends": "./tsconfig.production.json",
-  "include": ["src"],
-  "exclude": ["src/**/*.spec.ts"],
+  "compilerOptions": {
+    // Interop Constraints
+    "verbatimModuleSyntax": false
+  },
+  "include": ["src", "test", "demo"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

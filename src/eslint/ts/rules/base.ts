@@ -1,6 +1,6 @@
 // @see https://typescript-eslint.io/rules/?=xrecommended-xstrict-xstylistic
 
-import buildInRules from '@/eslint/buildIn/rules/index.js';
+import buildInRules from '@/eslint/buildIn/rules/index.ts';
 
 export default {
   // Enforce that class methods utilize this.

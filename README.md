@@ -9,3 +9,5 @@
 [![🔀 Sync mirror to Gitee](https://github.com/ljtang2009/lint-configuration/actions/workflows/sync-gitee.yml/badge.svg)](https://github.com/ljtang2009/lint-configuration/actions/workflows/sync-gitee.yml)
 
 [![codecov](https://codecov.io/gh/ljtang2009/lint-configuration/graph/badge.svg?token=tnzJK8PqsW)](https://codecov.io/gh/ljtang2009/lint-configuration)
+
+[![👮 Audit](https://github.com/ljtang2009/lint-configuration/actions/workflows/audit.yml/badge.svg)](https://github.com/ljtang2009/lint-configuration/actions/workflows/audit.yml)

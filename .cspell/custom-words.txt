@@ -8,3 +8,4 @@ redeclaration
 tseslint
 unspaced
 vitepress
+snyk

@@ -1,4 +1,4 @@
-name: 🧹 Lint
+name: 👮 Audit
 
 on:
   push:
@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  Lint:
+  Audit:
     runs-on: macos-14
 
     steps:
@@ -22,10 +22,9 @@ jobs:
       - name: Setup pnpm environment
         uses: ./.github/actions/setup-pnpm
 
-      - name: Build lint-configuration
+      - name: Audit
         run: |
-          pnpm build
-
-      - name: Lint
-        run: |
-          pnpm lint
+          pnpm audit
+          snyk test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}

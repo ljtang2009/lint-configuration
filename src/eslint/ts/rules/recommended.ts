@@ -153,11 +153,11 @@ export default {
   'restrict-plus-operands': [
     'error',
     {
-      allowAny: false,
-      allowBoolean: false,
-      allowNullish: false,
-      allowNumberAndString: false,
-      allowRegExp: false,
+      allowAny: true,
+      allowBoolean: true,
+      allowNullish: true,
+      allowNumberAndString: true,
+      allowRegExp: true,
       skipCompoundAssignments: false,
     },
   ],
@@ -167,11 +167,11 @@ export default {
   'restrict-template-expressions': [
     'error',
     {
-      allowAny: false,
-      allowBoolean: false,
-      allowNullish: false,
-      allowNumber: false,
-      allowRegExp: false,
+      allowAny: true,
+      allowBoolean: true,
+      allowNullish: true,
+      allowNumber: true,
+      allowRegExp: true,
     },
   ],
 

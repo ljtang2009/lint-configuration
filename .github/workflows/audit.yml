@@ -24,7 +24,6 @@ jobs:
 
       - name: Audit
         run: |
-          pnpm audit
-          snyk test
+          pnpm audit-dep:ci
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}

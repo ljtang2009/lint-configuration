@@ -24,7 +24,7 @@ export default {
 
   // Disallow await inside of loops
   // https://eslint.org/docs/rules/no-await-in-loop
-  'no-await-in-loop': 'error',
+  'no-await-in-loop': 'off',
 
   // disallow modifying variables of class declarations
   // https://eslint.org/docs/rules/no-class-assign

@@ -1,3 +1,15 @@
+# [1.0.0](https://github.com/ljtang2009/lint-configuration/compare/v0.2.5...v1.0.0) (2024-07-31)
+
+
+### Features
+
+* :sparkles: realse major version ([a75f0ae](https://github.com/ljtang2009/lint-configuration/commit/a75f0ae4f11540f819af2d75390a77e767215a10))
+
+
+### BREAKING CHANGES
+
+* realse major version
+
 ## [0.2.5](https://github.com/ljtang2009/lint-configuration/compare/v0.2.4...v0.2.5) (2024-07-29)
 
 

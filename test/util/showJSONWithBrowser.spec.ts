@@ -1,18 +1,21 @@
 import {
-  describe, it, expect, vi, beforeEach, afterEach,
+  describe, it, expect, vi, beforeEach,
 } from 'vitest';
 import { vol } from 'memfs';
 import open from 'open';
 import showJSONWithBrowser from '@/util/showJSONWithBrowser.ts';
 
 describe('show json with browser function', () => {
-  vi.mock('node:fs');
+  vi.mock('node:fs', async () => {
+    const mockFS = (await import('memfs')).fs;
+    return {
+      ...mockFS,
+      default: mockFS,
+    };
+  });
   vi.mock('open');
   beforeEach(() => {
     vol.reset();
-  });
-  afterEach(() => {
-    vi.restoreAllMocks();
   });
 
   it('should write HTML content to temp file', () => {

@@ -19,6 +19,7 @@ describe('show json with browser function', () => {
     showJSONWithBrowser({ key: 'value123' });
     let htmlString = '';
     const volJSON = vol.toJSON();
+    console.warn('volJSON :>> ', volJSON);
     const filePathList = Object.keys(volJSON);
     if (filePathList.length > 0) {
       htmlString = volJSON[filePathList[0]!]!;

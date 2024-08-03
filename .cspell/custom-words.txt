@@ -1,5 +1,4 @@
 codecov
-desm
 Gitee
 iife
 lcov
